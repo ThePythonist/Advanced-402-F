@@ -1,35 +1,35 @@
-class Human:
-    def __init__(self, name, age, height, weight):
-        self.name = name
-        self.age = age
-        self.heigth = height
-        self.weight = weight
+class Calculator:
+    def __init__(self, n1, op, n2):
+        self.num1 = n1
+        self.operator = op
+        self.num2 = n2
 
-    def talk(self):
-        pass
+    def add(self):
+        print(self.num1 + self.num2)
 
-    def eat(self):
-        pass
+    def substract(self):
+        print(self.num1 - self.num2)
 
-    def sleep(self):
-        pass
+    def multiply(self):
+        print(self.num1 * self.num2)
 
-
-class Student(Human):
-    def __init__(self, name, age, height, weight, studentcode, uni, fieldofstudy):
-        super().__init__(name, age, height, weight)
-        self.studentcode = studentcode
-        self.uni = uni
-        self.fieldofstudy = fieldofstudy
-
-    def study(self):
-        pass
-
-    def get_to_university(self):
-        pass
+    def divide(self):
+        print(self.num1 / self.num2)
 
 
-farzad = Human("Farzazd", 24, 183, 75)
-kian = Student("kian", 21, 175, 70,"42423","Amir Kabir","Chemical Engineering")
+number1 = int(input("Enter number : "))
+operator = input("Enter operator : ")
+number2 = int(input("Enter number : "))
 
-kian.study()
+result = Calculator(number1, operator, number2)
+
+print("Result : ", end="")
+
+if operator == "+":
+    result.add()
+elif operator == "-":
+    result.substract()
+elif operator == "*":
+    result.multiply()
+elif operator == "/":
+    result.divide()
