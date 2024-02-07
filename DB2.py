@@ -21,9 +21,9 @@ students = [
     {"name": "Mehrdad", "code": "40216", "job": "Data Engineer"},
 ]
 
-for person in students:
-    command = f"INSERT INTO employees (name,code,job) VALUES {(person['name'], person['code'], person['job'])}"
-    cur.execute(command)
+# for person in students:
+#     command = f"INSERT INTO employees (name,code,job) VALUES {(person['name'], person['code'], person['job'])}"
+#     cur.execute(command)
 
 cur.execute(f"INSERT INTO employees(name,code,job) VALUES ('Ahora','40223','Project Manager')")
 
